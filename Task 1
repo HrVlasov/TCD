@@ -1,0 +1,16 @@
+import drawBot as db
+
+canvasSize = 500
+db.newDrawing()
+db.newPage(canvasSize, canvasSize)
+
+circleSize = 20
+stepSize = 30  # Устанавливаем длину шага
+
+for i in range(0, canvasSize * canvasSize, stepSize):
+    x = i % canvasSize
+    y = i // canvasSize
+    db.oval(x, y, circleSize, circleSize)
+
+db.saveImage("vertical_circles.png")
+db.endDrawing()
