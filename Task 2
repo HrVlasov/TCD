@@ -1,0 +1,15 @@
+import drawBot as db
+
+canvasSize = 500
+db.newDrawing()
+db.newPage(canvasSize, canvasSize)
+
+squareSize = 20
+stepSize = 30  # Устанавливаем длину шага
+
+for x in range(0, canvasSize, stepSize):
+    for y in range(0, canvasSize, stepSize):
+        db.rect(x, y, squareSize, squareSize)
+
+db.saveImage("nested_loops.png")
+db.endDrawing()
