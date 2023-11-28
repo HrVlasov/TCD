@@ -1,0 +1,15 @@
+import drawBot as db
+
+canvasSize = 500
+db.newDrawing()
+db.newPage(canvasSize, canvasSize)
+
+starSize = 20
+stepSize = 30  # Устанавливаем длину шага
+
+for i in range(0, canvasSize, stepSize):
+    for j in range(0, canvasSize, stepSize):
+        db.star(i, j, 5, starSize, starSize)
+
+db.saveImage("diagonal_stars.png")
+db.endDrawing()
